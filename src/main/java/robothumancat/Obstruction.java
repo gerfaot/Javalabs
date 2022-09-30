@@ -1,5 +1,5 @@
 package robothumancat;
 
-public interface Runnable {
-    void run();
+public interface Obstruction {
+    boolean obstruction(Obstruction obstr);
 }

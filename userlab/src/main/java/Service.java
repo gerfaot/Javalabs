@@ -13,8 +13,9 @@ public class Service {
     }
 
 
-    void getAllUsers(){
-
+    User[] getAllUsers(){
+        User[] users = db.getAllUsers();
+        return users;
     }
 
     void addUser(User user){

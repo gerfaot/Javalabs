@@ -1,7 +1,7 @@
 package robothumancat;
 
-public interface Jumpable {
+public interface Member {
+    void run(Treadmill road);
 
-    void jump();
-
+    void jump(Wall wall);
 }
