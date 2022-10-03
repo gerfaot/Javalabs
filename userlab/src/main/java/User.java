@@ -1,6 +1,6 @@
 public class User {
-    int id;
-    String name;
+    private int id;
+    private String name;
 
     public User(String name, int id){
         this.name = name;
@@ -10,6 +10,10 @@ public class User {
     public String toString(){
         String userdata = "id: " + id + " name - " + name;
         return userdata;
+    }
+    
+    public int getId() {
+        return this.id;
     }
 
 }
