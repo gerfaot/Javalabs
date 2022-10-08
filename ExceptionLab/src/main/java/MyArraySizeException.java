@@ -1,8 +1,6 @@
-public class MyArraySizeException extends Exception{
-    String smthng;
+public class MyArraySizeException extends Exception {
     public MyArraySizeException(String s) {
-        super(s + " <---- look");
-        smthng = "Smthng!";
+        super(s);
     }
 
 }

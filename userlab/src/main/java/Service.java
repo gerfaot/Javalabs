@@ -1,28 +1,29 @@
 public class Service {
-    DAO db;
+    private DAO db;
 
 
-    void connectToDB(){
+    public void connectToDB(){
         this.db = new Database();
         System.out.println("Connected to database");
     }
 
-    User getUser(int id){
+    public User getUser(int id){
         User user = db.getUserById(id);
         return user;
     }
 
 
-    User[] getAllUsers(){
+    public User[] getAllUsers(){
         User[] users = db.getAllUsers();
         return users;
     }
 
-    void addUser(User user){
-
+    public void addUser(User user){
+        db.addUser(user);
     }
 
-    void deleteUser(int id){
+    public void deleteUserById(int id){
+        db.deleteUserById(id);
 
     }
 
