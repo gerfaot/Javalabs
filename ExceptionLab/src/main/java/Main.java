@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class Main {
 
-    static void stringArrayToIntSum(String[][] strArray) throws MyArraySizeException {
+    static void stringArrayToIntSum(String[][] strArray) {
         int sum = 0;
         int firstIndex = 0;
         int secondIndex = 0;
@@ -23,25 +23,13 @@ public class Main {
         System.out.println(sum);
     }
 
-    public static void main(String[] args) throws MyArraySizeException {
-        String[][] str = new String[4][4];
-
-        str[0][0] = "1";
-        str[2][0] = "9";
-        str[0][1] = "2";
-        str[2][1] = "10";
-        str[0][2] = "3";
-        str[2][2] = "11";
-        str[0][3] = "4";
-        str[2][3] = "12";
-        str[1][0] = "5";
-        str[3][0] = "13";
-        str[1][1] = "6";
-        str[3][1] = "14";
-        str[1][2] = "7";
-        str[3][2] = "15";
-        str[1][3] = "8";
-        str[3][3] = "16";
+    public static void main(String[] args) {
+        String[][] str = new String[][]{
+                {"1", "2", "3", "4"},
+                {"1", "2", "3", "4"},
+                {"1", "2", "3", "4"},
+                {"1", "2", "3", "4"}
+        };
 
         stringArrayToIntSum(str);
 
