@@ -8,14 +8,15 @@ public class Service {
     }
 
     public User getUser(int id){
-        User user = db.getUserById(id);
-        return user;
+        if (id < 1){
+            throw new IllegalArgumentException();
+        }
+        return db.getUserById(id);
     }
 
 
     public User[] getAllUsers(){
-        User[] users = db.getAllUsers();
-        return users;
+        return db.getAllUsers();
     }
 
     public void addUser(User user){
@@ -23,6 +24,9 @@ public class Service {
     }
 
     public void deleteUserById(int id){
+        if (id < 1){
+            throw new IllegalArgumentException();
+        }
         db.deleteUserById(id);
 
     }

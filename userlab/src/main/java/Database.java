@@ -5,6 +5,7 @@ public class Database implements DAO{
 
     @Override
     public User getUserById(int id) {
+
         for (User user : allUsers){
             if(user.getId() == id){
                 return user;

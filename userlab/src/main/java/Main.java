@@ -10,6 +10,7 @@ public class Main {
         service.addUser(user2);
         service.deleteUserById(3);
         System.out.println(Arrays.toString(service.getAllUsers()));
+        System.out.println(service.getUser(2));
 
 
     }
