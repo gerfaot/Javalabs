@@ -2,8 +2,8 @@ package robothumancat;
 
 
 public class Human implements Member {
-    String name;
-    int stamina;
+    private String name;
+    private int stamina;
 
     public Human(String name, int stamina){
         if (stamina < 0) {
