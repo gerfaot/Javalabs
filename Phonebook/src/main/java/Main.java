@@ -46,9 +46,9 @@ public class Main {
         //phonebook.add("asd", Set<String>)
         phonebook.add("Orlov", "+7119852123");
         phonebook.add("Orlov", "+7998546512");
-        phonebook.add("Chernishov", "+7544546512");
+        phonebook.add("", "78907");
         System.out.println(phonebook.get("Orlov"));
-        System.out.println(phonebook.get("Chernishov"));
+        System.out.println(phonebook.get(""));
 
     }
 }

@@ -10,13 +10,23 @@ public class Phonebook {
 
 
     public void add(String surname, String numbers){
-        phonebook.computeIfAbsent(surname,
-                s-> new HashSet<String>())
-                .add(numbers);
+        if(surname !=null && !surname.isEmpty() && numbers != null && !numbers.isEmpty()) {
+            phonebook.computeIfAbsent(surname,
+                    s -> new HashSet<>())
+                    .add(numbers);
+        }
+        else {
+            System.out.println("Ошибка ввода");
+        }
     }
 
 
     public Set<String> get(String surname){
-        return phonebook.get(surname);
+        if(surname !=null && !surname.isEmpty()) {
+            return phonebook.get(surname);
+        }
+        Set<String> exc = new HashSet<>();
+        exc.add("Ошибка ввода");
+        return exc;
     }
 }
