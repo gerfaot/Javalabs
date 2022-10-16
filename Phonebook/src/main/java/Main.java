@@ -3,8 +3,11 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
+import java.util.HashMap;
 
 public class Main {
+
+
     public static void main(String[] args) {
         ArrayList<String> words = new ArrayList<>();
         words.add("A");
@@ -38,6 +41,14 @@ public class Main {
                         e -> 1,
                         Integer::sum));
         freq.forEach((k, v) -> System.out.println(k + ": " + v));
+
+        Phonebook phonebook = new Phonebook();
+        //phonebook.add("asd", Set<String>)
+        phonebook.add("Orlov", "+7119852123");
+        phonebook.add("Orlov", "+7998546512");
+        phonebook.add("Chernishov", "+7544546512");
+        System.out.println(phonebook.get("Orlov"));
+        System.out.println(phonebook.get("Chernishov"));
 
     }
 }
